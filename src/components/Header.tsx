@@ -11,15 +11,15 @@ export default function Header() {
               <Image src='/logo.webp' alt='News Logo' width={64} height={64} className='w-8 h-8' />
               <span className='font-semibold text-xl'>MadSand</span>
             </Link>
-            <ul className='flex gap-4'>
+            <ul className='flex gap-6'>
               <li>
-                <Link href='/blog' className='hover:text-blue-600'>
-                  Events
+                <Link href='/world' className='hover:text-blue-600'>
+                  World
                 </Link>
               </li>
               <li>
-                <Link href='/about' className='hover:text-blue-600'>
-                  Learn
+                <Link href='/events' className='hover:text-blue-600'>
+                  Events
                 </Link>
               </li>
             </ul>
