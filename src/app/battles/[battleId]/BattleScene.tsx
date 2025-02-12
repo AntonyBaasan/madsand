@@ -10,7 +10,7 @@ interface BattleSceneProps {
   battleId?: string;
   players?: string[];
 }
-const BattleScene: React.FC<BattleSceneProps> = ({ battleId }) => {
+const BattleScene: React.FC<BattleSceneProps> = () => {
   const [game, setGame] = useState<Game>();
   const [currentPlayer, setCurrentPlayer] = useState<number>(1);
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
@@ -108,8 +108,10 @@ const BattleScene: React.FC<BattleSceneProps> = ({ battleId }) => {
       <div>
         Selected Unit - type:{selectedUnit?.unitType} | attack:{selectedUnit?.attack} | health:{selectedUnit?.health}
       </div>
-      <div >
-        <button className='bg-blue-500 text-white px-2' onClick={endMyTurn} >Finish My Turn</button>
+      <div>
+        <button className='bg-blue-500 text-white px-2' onClick={endMyTurn}>
+          Finish My Turn
+        </button>
       </div>
       <div>
         <div>Board:</div>

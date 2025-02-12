@@ -134,8 +134,8 @@ export class Game {
     for (let i = 0; i < 15; i++) {
       for (let j = 0; j < 15; j++) {
         if (this.board[i][j]) {
-          this.board[i][j].hasMoved = false;
-          this.board[i][j].hasAttacked = false;
+          (this.board[i][j] as Unit).hasMoved = false;
+          (this.board[i][j] as Unit).hasAttacked = false;
         }
       }
     }
