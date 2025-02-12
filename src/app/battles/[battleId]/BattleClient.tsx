@@ -19,7 +19,7 @@ const BattleClient: React.FC<BattleClientProps> = ({ battleId }) => {
   const [debugMessage, setDebugMessage] = useState<string>('');
 
   useEffect(() => {
-    const URL = 'http://localhost:1999';
+    const URL = process.env.NEXT_PUBLIC_WS_SERVER; //'http://localhost:1999';
     const socket = io(URL, {
       autoConnect: false,
       auth: { token },
@@ -154,7 +154,9 @@ const BattleClient: React.FC<BattleClientProps> = ({ battleId }) => {
         </div>
       </div>
       <div>Board:</div>
-      <div><BattleScene /></div>
+      <div>
+        <BattleScene />
+      </div>
     </div>
   );
 };
