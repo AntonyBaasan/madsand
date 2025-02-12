@@ -13,18 +13,22 @@ export class Game {
     this.createUnit(1, 0, 0, 'melee');
     this.createUnit(1, 0, 1, 'melee');
     this.createUnit(1, 0, 2, 'range');
+    this.createUnit(1, 5, 2, 'range');
+    this.createUnit(1, 3, 2, 'range');
 
     // Create units for player 2
     this.createUnit(2, 14, 14, 'melee');
     this.createUnit(2, 10, 12, 'melee');
     this.createUnit(2, 13, 14, 'range');
+    this.createUnit(2, 10, 14, 'range');
+    this.createUnit(2, 12, 13, 'range');
   }
 
   createUnit(player: number, x: number, y: number, unitType: 'melee' | 'range') {
     const health = Math.floor(Math.random() * 50) + 50; // 50-100 health
     const attack = Math.floor(Math.random() * 20) + 10; // 10-30 attack
     const defense = Math.floor(Math.random() * 10) + 5; // 5-15 defense
-    const movement = Math.floor(Math.random() * 3) + 2; // 2-4 movement
+    const movement = Math.floor(Math.random() * 3) + 8; // 2-4 movement
     // const movement = 30;
 
     this.board[x][y] = { player, health, attack, defense, movement, unitType } as Unit;
